@@ -1,1 +1,1 @@
-# hackathon-hc-certificate
+# hackathon-hc-card
