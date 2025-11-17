@@ -1,0 +1,29 @@
+# IDE
+.idea
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Dependencies (if any)
+node_modules/
+target/
+build/
+dist/
+
+# Environment files
+.env
+.env.local
+
+# AI
+CLAUDE.md
