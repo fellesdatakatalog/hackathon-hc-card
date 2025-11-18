@@ -49,7 +49,7 @@
  
 <https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl> a cpsv:PublicService ; 
     dct:title 					"Parkeringstillatelse for forflytningshemmede"@nb ;
-    dct:description 			"Tjenesten gjør det mulig for personer med nedsatt funksjonsevne å søke om parkeringstillatelse i Oslo kommune. Parkeringstillatelsen gir rett til å parkere på reserverte plasser og på spesielle vilkår."@nb ;
+    dct:description 			"Tjenesten gir forflytningshemmede med et reelt behov for parkeringslette et tilgjengelig parkeringstilbud. Parkeringstillatelsen gir rett til å parkere på reserverte plasser og på spesielle vilkår i Oslo kommune."@nb ;
     dct:identifier 				"https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl"^^xsd:anyURI ;
     cv:hasCompetentAuthority 	<https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/958935420> ; 
     cv:contactPoint 			<https://testdepartementet/tjenestekatalog-1/kontaktpunkt-2.ttl> ;
@@ -64,31 +64,33 @@
 								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-3.ttl> ;
     dct:spatial 				<http://publications.europa.eu/resource/authority/place/NOR_OSL> ; # Oslo. 
     foaf:homepage 				<https://www.oslo.kommune.no/gate-transport-og-parkering/parkering/sok-hc-kort/> ;  	
-    cv:processingTime "P4W"^^xsd:duration ;
-    adms:status <http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> ; # tjenesten er ferdig utviklet
-    cv:thematicArea <https://psi.norge.no/los/ord/parkering-og-hvileplasser> ;
-    cv:hasLegalResource <https://lovdata.no/eli/forskrift/2016/03/18/264> ; 
-    cv:relatedService <https://testdepartementet/tjenestekatalog-1/tjeneste-2.ttl> , <https://testdepartementet/tjenestekatalog-1/tjeneste-3.ttl> ;
-    cv:isGroupedBy <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-1.ttl> , <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-2.ttl> .
+    cv:processingTime 			"P4W"^^xsd:duration ;
+    adms:status 				<http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> ;
+    cv:thematicArea 			<https://psi.norge.no/los/ord/parkering-og-hvileplasser> ;
+    cv:hasLegalResource 		<https://lovdata.no/eli/forskrift/2016/03/18/264> ; 
+    cv:relatedService 			<https://testdepartementet/tjenestekatalog-1/tjeneste-2.ttl> , 
+								<https://testdepartementet/tjenestekatalog-1/tjeneste-3.ttl> ;
+    cv:isGroupedBy 				<https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-1.ttl> , 
+								<https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-2.ttl> .
  
  
 <https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-1.ttl> a cv:Channel ;
-    dct:identifier "https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-1.ttl"^^xsd:anyURI ;
-    dct:title "Digital innsending"@nb ;
-    dct:type <https://data.norge.no/vocabulary/service-channel-type#online-service> ; 
-    cv:ownedBy <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/958935420> ;
-    vcard:hasURL <https://www.oslo.kommune.no/parkering/hc-kort/soknad/> . # Dette er nettadressen til nettsiden søknaden kan startes fra. 
+    dct:identifier 				"https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-1.ttl"^^xsd:anyURI ;
+    dct:title 					"Digital innsending"@nb ;
+    dct:type 					<https://data.norge.no/vocabulary/service-channel-type#online-service> ; 
+    cv:ownedBy 					<https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/958935420> ;
+    vcard:hasURL 				<https://www.oslo.kommune.no/parkering/hc-kort/soknad/> . # Dette er nettadressen til nettsiden søknaden kan startes fra. 
  
 <https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-2.ttl> a cv:Channel ;
-    dct:identifier "https://testdepartementet/tjenestekatalog-1/tjeneste-2/tjenestekanal-1.ttl"^^xsd:anyURI ;
-    dct:title "Papirsøknad sendt i posten"@nb ;
-    dct:type <https://data.norge.no/vocabulary/service-channel-type#mail> ;
-    dct:description "Papirskjema sendes til Bymiljøetaten, Oslo kommune."@nb .
+    dct:identifier 				"https://testdepartementet/tjenestekatalog-1/tjeneste-2/tjenestekanal-1.ttl"^^xsd:anyURI ;
+    dct:title 					"Papirsøknad sendt i posten"@nb ;
+    dct:type 					<https://data.norge.no/vocabulary/service-channel-type#mail> ;
+    dct:description 			"Papirskjema sendes til Bymiljøetaten, Oslo kommune."@nb .
  
 <https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-1.ttl> a cv:Evidence ;
-    dct:title "Legeerklæring"@nb ;
-    dct:description "Bekreftelse fra lege på funksjonsnedsettelse."@nb ;
-    cpsvno:validityDuration "P6M"^^xsd:duration ; #sjekk opp hvor gammel legeerklæring kan være
+    dct:title 					"Legeerklæring"@nb ;
+    dct:description 			"Bekreftelse fra lege på funksjonsnedsettelse."@nb ;
+    cpsvno:validityDuration 	"P6M"^^xsd:duration ; #sjekk opp hvor gammel legeerklæring kan være
     dct:language <https://publications.europa.eu/resource/authority/language/NOR>, # norsk
       <https://publications.europa.eu/resource/authority/language/ENG>; # engelsk
     foaf:page <https://www.oslo.kommune.no/getfile.php/13500123-1703234712/Tjenester%20og%20tilbud/Gate%2C%20transport%20og%20parkering/Parkering/S%C3%B8k%20HC-kort/Legeerkl%C3%A6ringsskjema%20-%20HC.pdf> ;
