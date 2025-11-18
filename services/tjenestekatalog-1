@@ -57,7 +57,8 @@
       							<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-2.ttl> ;
   	cpsv:hasInput 				<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-1.ttl> ,
 								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-2.ttl> ,
-								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-3.ttl> ; 
+								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-3.ttl> ,
+								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-4.ttl>; 
     cpsv:produces 				<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-1.ttl> ,
 								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-2.ttl> ,
 								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-3.ttl> ;
@@ -83,13 +84,6 @@
     dct:title "Papirsøknad sendt i posten"@nb ;
     dct:type <https://data.norge.no/vocabulary/service-channel-type#mail> ;
     dct:description "Papirskjema sendes til Bymiljøetaten, Oslo kommune."@nb .
-
-
- 
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevdDokumentasjon-4.ttl> a cpsvno:RequiresEvidence ;
-    dct:title "Søknadsskjema for HC-kort"@nb ;
-    dct:description "placeholder for beskrivelse" ;
-    foaf:page <https://www.oslo.kommune.no/getfile.php/13500127-1703234712/.../Søknadsskjema%20HC-kort.pdf> .
  
 <https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-1.ttl> a cv:Evidence ;
     dct:title "Legeerklæring"@nb ;
@@ -109,6 +103,11 @@
     dct:title "Kopi av gyldig legitimasjon"@nb ;
     dct:description "placeholder beskrivelse" ; # Legg til beskrivelse 
     .
+
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-4.ttl> a cv:Evidence ;
+    dct:title "Søknadsskjema for HC-kort"@nb ;
+    dct:description "placeholder for beskrivelse" ;
+    foaf:page <https://www.oslo.kommune.no/getfile.php/13500127-1703234712/.../Søknadsskjema%20HC-kort.pdf> .
 
 <https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-1.ttl> a cv:Output ;
     dct:title "Innvilget søknad om parkeringstillatelse for forflytningshemmede (HC-kort)"@nb ;
