@@ -30,7 +30,7 @@
 			  <https://testdepartementet/tjenestekatalog-1/tjeneste-5.ttl> ;
    cv:contactPoint <https://testdepartementet/tjenestekatalog1/kontaktpunkt-1.ttl> ;
    dct:title "Tjeneste- og hendelseskatalog for hackaton på Brukerrådet 2025"@nb ;
-   dct:publisher <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/555111097> ; # Organisasjonsnummer til Testdepartementet
+   dct:publisher <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/555111098> ; # Organisasjonsnummer til Testdepartementet
    dcatno:containsEvent <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-1.ttl> , 
                         <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-2.ttl> ;
                         .
