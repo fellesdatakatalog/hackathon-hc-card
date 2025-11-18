@@ -148,7 +148,8 @@
 
 <https://testdepartementet/tjenestekatalog-1/tjeneste-5.ttl> a cpsv:PublicService ;
     dct:title "Fritak for piggdekkavgift for forflytningshemmede."@nb ;
-    dct:description "placeholder beskrivelse" @nb .
+    dct:description "placeholder beskrivelse" @nb ;
+.
  
 
 <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-1.ttl> a cv:LifeEvent ;
@@ -162,7 +163,7 @@
 <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-2.ttl> a cv:LifeEvent ;
     dct:title "Aldring og nedsatt mobilitet"@nb ;
     dct:description "Livshendelse som omfatter tjenester rettet mot eldre med redusert funksjonsevne og mobilitet."@nb ;
-    cpsvno:mayTriggerNeedFor <https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl> ,
-	      <https://testdepartementet/tjenestekatalog-1/tjeneste-2.ttl> ,
-      	<https://testdepartementet/tjenestekatalog-1/tjeneste-3.ttl> .
+    cpsvno:mayTriggerNeedFor	<https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl> ,
+	      						<https://testdepartementet/tjenestekatalog-1/tjeneste-2.ttl> ,
+      							<https://testdepartementet/tjenestekatalog-1/tjeneste-3.ttl> .
 
