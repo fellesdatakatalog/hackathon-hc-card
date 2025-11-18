@@ -37,34 +37,32 @@
 
 <https://testdepartementet/tjenestekatalog-1/kontaktpunkt-1.ttl> # kontaktpunkt
    a cv:ContactPoint;
-   vcard:category "Kontaktside"@nb , "Kontaktside"@nn , "Contact page"@en ; # Valgfri med type kontaktpunkt
-   cv:contactPage <https://www.digdir.no/digdir/kontakt-oss/943>; # Valgfri med kontaktside
-   cv:email "mailto:fellesdatakatalog@digdir.no"^^xsd:anyURI; # Valgfri med e-post
-   vcard:language <http://publications.europa.eu/resource/authority/language/NOB> # Valgfri med har språk
+   vcard:category "Kontaktside"@nb , "Kontaktside"@nn , "Contact page"@en ; 
+   cv:contactPage <https://www.digdir.no/digdir/kontakt-oss/943>; 
+   vcard:language <http://publications.europa.eu/resource/authority/language/NOB> 
 .
 
 <https://testdepartementet/tjenestekatalog-1/kontaktpunkt-2.ttl> a cv:ContactPoint ;
-   vcard:category "epost"@nb , "epost"@nn , "email"@en ; # Valgfri med type kontaktpunkt
-   cv:email "mailto:fellesdatakatalog@digdir.no"^^xsd:anyURI ; # Valgfri med e-post
-   vcard:language <http://publications.europa.eu/resource/authority/language/NOB> . # Valgfri med har språk
-
+   vcard:category "epost"@nb , "epost"@nn , "email"@en ; 
+   cv:email "mailto:fellesdatakatalog@digdir.no"^^xsd:anyURI ; 
+   vcard:language <http://publications.europa.eu/resource/authority/language/NOB> .
  
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl> a cpsv:PublicService ; # Tjeneste HC-kort
-    dct:title "Søknad om parkeringstillatelse for forflytningshemmede (HC-kort)"@nb ;
-    dct:description "Tjenesten gjør det mulig for personer med nedsatt funksjonsevne å søke om parkeringstillatelse (HC-kort) i Oslo kommune. HC-kortet gir rett til å parkere på reserverte plasser og på spesielle vilkår."@nb ;
-    dct:identifier "https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl"^^xsd:anyURI ;
-    cv:hasCompetentAuthority <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/958935420> ; # Organisasjonsnummeret til Oslo Kommune
-    cv:contactPoint <https://testdepartementet/tjenestekatalog-1/kontaktpunkt-2.ttl> ;
-    cv:hasChannel <https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-1.ttl> , #må sjekke hvordan denne skal brukes
-      	<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-2.ttl> ;
-    cpsvno:hasRequiredEvidence <https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevdDokumentasjon-1.ttl> ,
-		    <https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevdDokumentasjon-2.ttl> , 			
-        <https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevdDokumentasjon-3.ttl> ;
-	  cv:hasInput <https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-1.ttl> ; 
-    cpsvno:hasPossibleOutput <https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenesteresultat-1.ttl>,
-		<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenesteresultat-2.ttl> ;
-    dct:spatial <http://publications.europa.eu/resource/authority/place/NOR_OSL> ; # Oslo. 
-    foaf:homepage <https://www.oslo.kommune.no/gate-transport-og-parkering/parkering/sok-hc-kort/> ;  	
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl> a cpsv:PublicService ; 
+    dct:title 					"Parkeringstillatelse for forflytningshemmede"@nb ;
+    dct:description 			"Tjenesten gjør det mulig for personer med nedsatt funksjonsevne å søke om parkeringstillatelse i Oslo kommune. Parkeringstillatelsen gir rett til å parkere på reserverte plasser og på spesielle vilkår."@nb ;
+    dct:identifier 				"https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl"^^xsd:anyURI ;
+    cv:hasCompetentAuthority 	<https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/958935420> ; 
+    cv:contactPoint 			<https://testdepartementet/tjenestekatalog-1/kontaktpunkt-2.ttl> ;
+    cv:hasChannel 				<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-1.ttl> , 
+      							<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-2.ttl> ;
+  	cv:hasInput 				<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-1.ttl> ,
+								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-2.ttl> ,
+								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-3.ttl> ; 
+    cpsv:produces 				<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-1.ttl> ,
+								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-2.ttl> ,
+								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-3.ttl> ;
+    dct:spatial 				<http://publications.europa.eu/resource/authority/place/NOR_OSL> ; # Oslo. 
+    foaf:homepage 				<https://www.oslo.kommune.no/gate-transport-og-parkering/parkering/sok-hc-kort/> ;  	
     cv:processingTime "P4W"^^xsd:duration ;
     adms:status <http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> ; # tjenesten er ferdig utviklet
     cv:thematicArea <https://psi.norge.no/los/ord/parkering-og-hvileplasser> ;
@@ -93,7 +91,7 @@
     dct:description "placeholder for beskrivelse" ;
     foaf:page <https://www.oslo.kommune.no/getfile.php/13500127-1703234712/.../Søknadsskjema%20HC-kort.pdf> .
  
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevdDokumentasjon-1.ttl> a cpsvno:RequiredEvidence ;
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-1.ttl> a cv:Evidence ;
     dct:title "Legeerklæring"@nb ;
     dct:description "Bekreftelse fra lege på funksjonsnedsettelse."@nb ;
     cpsvno:validityDuration "P6M"^^xsd:duration ; #sjekk opp hvor gammel legeerklæring kan være
@@ -102,27 +100,27 @@
     foaf:page <https://www.oslo.kommune.no/getfile.php/13500123-1703234712/Tjenester%20og%20tilbud/Gate%2C%20transport%20og%20parkering/Parkering/S%C3%B8k%20HC-kort/Legeerkl%C3%A6ringsskjema%20-%20HC.pdf> ;
     dct:isPartOf <https://testdepartementet/datasettkatalog/datasett-1.ttl> . # datasett legeerklæring 
  
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevdDokumentasjon-2.ttl> a cpsvno:RequiredEvidence ;
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-2.ttl> a cv:Evidence ;
     dct:title "Passfoto"@nb ;
     dct:description "Nyere bilde av søkeren."@nb ;
     .
  
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevdDokumentasjon-3.ttl> a cpsvno:RequiredEvidence ;
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-3.ttl> a cv:Evidence ;
     dct:title "Kopi av gyldig legitimasjon"@nb ;
     dct:description "placeholder beskrivelse" ; # Legg til beskrivelse 
     .
 
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenesteresultat-1.ttl> a cpsvno:PossibleOutput ;
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-1.ttl> a cv:Output ;
     dct:title "Innvilget søknad om parkeringstillatelse for forflytningshemmede (HC-kort)"@nb ;
     dct:description "Søknad om parkeringtillatelse for forflytningshemmede er innvilget"@nb ;
 .
  
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenesteresultat-2.ttl> a cpsvno:PossibleOutput ;
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-2.ttl> a cv:Output ;
     dct:title "Parkeringstillatelse for forflytningshemmede (HC-kort)"@nb ;
     dct:description "Kortet gir rett til å parkere på HC-plasser og på visse andre vilkår i hele Norge."@nb ;
 .
 
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenesteresultat-3.ttl> a cpsvno:PossibleOutput ;
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-3.ttl> a cv:Output ;
     dct:title "Oppdatering av register for parkeringstillatelser"@nb ;
     dct:description "Oppdateringen oppdaterer register for parkeringstillatelser med den nyinnvilgede parkeringstillatelsen"@nb ;
 . 
