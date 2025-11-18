@@ -55,7 +55,7 @@
     cv:contactPoint 			<https://testdepartementet/tjenestekatalog-1/kontaktpunkt-2.ttl> ;
     cv:hasChannel 				<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-1.ttl> , 
       							<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-2.ttl> ;
-  	cv:hasInput 				<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-1.ttl> ,
+  	cpsv:hasInput 				<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-1.ttl> ,
 								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-2.ttl> ,
 								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-3.ttl> ; 
     cpsv:produces 				<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-1.ttl> ,
