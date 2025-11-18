@@ -44,7 +44,7 @@
 .
 
 <https://testdepartementet/tjenestekatalog-1/kontaktpunkt-2.ttl> a cv:ContactPoint ;
-   schema:contactType "Kontaktside"@nb , "Kontaktside"@nn , "Contact page"@en ; # Valgfri med type kontaktpunkt
+   vcard:category "Kontaktside"@nb , "Kontaktside"@nn , "Contact page"@en ; # Valgfri med type kontaktpunkt
    cv:ContactPage <> ; # Valgfri med kontaktside
    cv:email ""^^xsd:anyURI ; # Valgfri med e-post
    vcard:hasLanguage <http://publications.europa.eu/resource/authority/language/NOB> . # Valgfri med har språk
