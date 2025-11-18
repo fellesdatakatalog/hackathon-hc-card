@@ -22,52 +22,100 @@
 
 
 <https://testdepartementet/datasettkatalog-1.ttl> a dcat:Catalog ; # Katalog
-   dct:description             "Katalog som inneholder datasett knyttet til tjenester og hendelser på hackaton på Brukerrådet 19.-20. november 2025."@nb; 
-   dct:identifier              "https://testdepartementet/datasettkatalog1.ttl"^^xsd:anyURI; 
-   dct:title                   "Datakatalog for hackaton på Brukerrådet 2025"@nb;
-   dct:publisher               <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/>; # Organisasjonsnummer til Testdepartementet
-   cv:contactPoint             <https://testdepartementet/datasettkatalog/kontaktpunkt-1.ttl>;
-   dcatno:containsDataset      <https://testdepartementet/datasettkatalog-1/datasett-1.ttl>,
-                               <https://testdepartementet/datasettkatalog/datasett-2.ttl> ,
-                               <https://testdepartementet/datasettkatalog/datasett-3.ttl> ,
-                               <https://testdepartementet/datasettkatalog/datasett-4.ttl> ,
-                               <https://testdepartementet/datasettkatalog/datasett-5.ttl> ;
+	dct:description             "Katalog som inneholder datasett knyttet til tjenester og hendelser på hackaton på Brukerrådet 19.-20. november 2025."@nb; 
+	dct:identifier              "https://testdepartementet/datasettkatalog1.ttl"^^xsd:anyURI; 
+	dct:title                   "Datakatalog for hackaton på Brukerrådet 2025"@nb;
+	dct:publisher               <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/555111098>; # Organisasjonsnummer til Testdepartementet
+	cv:contactPoint             <https://testdepartementet/datasettkatalog/kontaktpunkt-1.ttl>;
+	dcat:dataset				<https://testdepartementet/datasettkatalog-1/datasett-1.ttl>,
+								<https://testdepartementet/datasettkatalog/datasett-2.ttl> ,
+								<https://testdepartementet/datasettkatalog/datasett-3.ttl> ,
+								<https://testdepartementet/datasettkatalog/datasett-4.ttl> ,
+								<https://testdepartementet/datasettkatalog/datasett-5.ttl> ;
+	dcat:service				<https://testdepartementet/datasettkatalog/datatjenste-1.ttl> ,
+								<https://testdepartementet/datasettkatalog/datatjenste-2.ttl> ,
+								<https://testdepartementet/datasettkatalog/datatjenste-3.ttl> ;
 .
 
-<https://testdepartementet/datasettkatalog/kontaktpunkt-1.ttl>
+<https://testdepartementet/datasettkatalog/kontaktpunkt-1.ttl> a vcard:ContactPoint ;
+	vcard:fn					"Servicedesk Testdepartementet"@nb ;
+	vcard:hasEmail				"mailto:fellesdatakatalog@digdir.no"^^xsd:anyURI ;
+.
 
 
 <https://testdepartementet/datasettkatalog/datasett-1.ttl> a dcat:Dataset ;
-   dct:title                   "Legeerklæring for parkeringstillatelse for forflytningshemmede"@nb ;
-   dct:description             "Legeerklæring som beskriver nedsatt funksjonsevne og behov for parkeringstillatelse for forflytningshemmede."@nb ; 
+	dct:title                   "Legeerklæring for parkeringstillatelse for forflytningshemmede"@nb ;
+	dct:description             "Legeerklæring som beskriver nedsatt funksjonsevne og behov for parkeringstillatelse for forflytningshemmede."@nb ; 
+	dcat:theme					<http://publications.europa.eu/resource/authority/data-theme/HEAL> ;
+	dcat:contactPoint			<https://testdepartementet/datasettkatalog/kontaktpunkt-1.ttl> ;
+	
 .  
 
 
 <https://testdepartementet/datasettkatalog/datasett-2.ttl> a dcat:Dataset ;
-   dct:title                   "Passfoto"@nb ;
-   dct:description             "Bilde av person, etter krav til passfoto."@nb ;
+	dct:title                   "Passfoto"@nb ;
+	dct:description             "Bilde av person, etter krav til passfoto."@nb ;
+	dcat:theme					<http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
+	dcat:contactPoint			<https://testdepartementet/datasettkatalog/kontaktpunkt-1.ttl> ;
+	dct:publisher               <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/555111098>;
+	dct:isPartOf				<https://testdepartementet/datasettkatalog/datasett-6.ttl> ;
 .
 
+
+
 <https://testdepartementet/datasettkatalog/datasett-3.ttl> a dcat:Dataset ;
-	dct:title                     "Førerkort for kjøretøy"@nb ;
-  dct:description               "Bevis som viser at person har rett til å kjøre et kjøretøy av en gitt klasse"@nb ;
-  
+	dct:title                   "Førerkort for kjøretøy"@nb ;
+	dct:description             "Bevis som viser at person har rett til å kjøre et kjøretøy av en gitt klasse"@nb ;
+  	dcat:theme					<http://publications.europa.eu/resource/authority/data-theme/TRAN> ;
+	dcat:contactPoint			<https://testdepartementet/datasettkatalog/kontaktpunkt-1.ttl> ;
+	dct:publisher               <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/971032081>;
+	dct:isPartOf				<https://testdepartementet/datasettkatalog/datasett-6.ttl> ;
 .
 
 <https://testdepartementet/datasettkatalog/datasett-4.ttl> a dcat:Dataset ;
-	dct:title                      "Parkeringbevis for forflytningshemmede"@nb ;
-  dct:description                "Bevis som viser at kjøretøy kan parkeres etter rettigheter knyttet til parkeringstillatelse for forflytningshemmede"@nb ;
-  
+	dct:title                    "Parkeringbevis for forflytningshemmede"@nb ;
+	dct:description              "Bevis som viser at kjøretøy kan parkeres etter rettigheter knyttet til parkeringstillatelse for forflytningshemmede"@nb ;
+	dcat:theme					<http://publications.europa.eu/resource/authority/data-theme/TRAN> ;
+	dcat:contactPoint			<https://testdepartementet/datasettkatalog/kontaktpunkt-1.ttl> ;  
+	dct:publisher               <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/958935420>;
+	dct:isPartOf				<https://testdepartementet/datasettkatalog/datasett-6.ttl> ;
 .
 
 <https://testdepartementet/datasettkatalog/datasett-5.ttl> a dcat:Dataset ;
-	dct:title                        "Register for parkeringstillatelser"@nb ;
-  dct:description                  "Registeret skal gi oversikt over hvilke kommunale parkeringstillatelser for forflytningshemmede som til enhver tid er gyldige."@nb ;
-  
+	dct:title                   "Register for parkeringstillatelser"@nb ;
+	dct:description             "Registeret skal gi oversikt over hvilke kommunale parkeringstillatelser for forflytningshemmede som til enhver tid er gyldige."@nb ;
+	dcat:theme					<http://publications.europa.eu/resource/authority/data-theme/TRAN> ;
+	dcat:contactPoint			<https://testdepartementet/datasettkatalog/kontaktpunkt-1.ttl> ;
+	dct:publisher               <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/971032081>;
 .
+
+<https://testdepartementet/datasettkatalog/datasett-6.ttl> a dcat:Dataset ;
+	dct:title                   "Bevisregister"@nb ;
+	dct:description             "Register som gir oversikt over alle bevisene som eksisterer i sandkasse-miljøet."@nb ;
+	dcat:theme					<http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
+	dcat:contactPoint			<https://testdepartementet/datasettkatalog/kontaktpunkt-1.ttl> ;  
+	dct:publisher               <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/991825827>;
+.
+	
 
 
 <https://testdepartementet/datasettkatalog/datatjenste-1.ttl> a dcat:DataService ;
-  dct:title         "Register for parkeringstillatelser"@nb ;
-  dct:description   "API-et kan benyttes av leverandører av parkeringssystemer til å melde inn nye parkeringstillatelser for forflytningshemmede eller endringer i disse."
-  
+	dct:title         			"Register for parkeringstillatelser"@nb ;
+	dct:description   			"API-et kan benyttes av leverandører av parkeringssystemer til å melde inn nye parkeringstillatelser for forflytningshemmede eller endringer i disse."@nb ;
+	dcat:servesDataset			<https://testdepartementet/datasettkatalog/datasett-5.ttl> ;
+	dcat:endpointURL			<https://hcreg.atlas.vegvesen.no> ;
+.
+
+<https://testdepartementet/datasettkatalog/datatjenste-2.ttl> a dcat:DataService ;
+	dct:title        			"Register for parkeringstillatelser - sjekk av gyldighet"@nb ;
+	dct:description   			"API-et kan benyttes av leverandører av parkeringssystemer til å melde inn nye parkeringstillatelser for forflytningshemmede eller endringer i disse."@nb ;
+	dcat:servesDataset			<https://testdepartementet/datasettkatalog/datasett-5.ttl> ;
+	dcat:endpointURL			<https://hcreg.atlas.vegvesen.no/> ;
+.
+
+<https://testdepartementet/datasettkatalog/datatjenste-3.ttl> a dcat:DataService ;
+	dct:title         			"Bevisregister"@nb ;
+	dct:description   			"API for å vise alle bevisene som eksisterer i sandkasse-miljøet. Her får du informasjon som leses av fra .well-known/openid-credential-issuer endepunktet til utstedere som er registrert i sandkassen."@nb ;
+	dcat:servesDataset			<https://testdepartementet/datasettkatalog/datasett-6.ttl> ;
+	dcat:endpointURL			<https://bevisregister.test.eidas2sandkasse.net/swagger-ui/index.html#/> ;
+  .
