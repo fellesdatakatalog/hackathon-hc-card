@@ -1,0 +1,73 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dcatno: <https://data.norge.no/vocabulary/dcatno#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix odrs: <http://schema.theodi.org/odrs#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<https://testdepartementet/datasettkatalog-1.ttl> a dcat:Catalog ; # Katalog
+   dct:description             "Katalog som inneholder datasett knyttet til tjenester og hendelser på hackaton på Brukerrådet 19.-20. november 2025."@nb; 
+   dct:identifier              "https://testdepartementet/datasettkatalog1.ttl"^^xsd:anyURI; 
+   dct:title                   "Datakatalog for hackaton på Brukerrådet 2025"@nb;
+   dct:publisher               <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/>; # Organisasjonsnummer til Testdepartementet
+   cv:contactPoint             <https://testdepartementet/datasettkatalog/kontaktpunkt-1.ttl>;
+   dcatno:containsDataset      <https://testdepartementet/datasettkatalog-1/datasett-1.ttl>,
+                               <https://testdepartementet/datasettkatalog/datasett-2.ttl> ,
+                               <https://testdepartementet/datasettkatalog/datasett-3.ttl> ,
+                               <https://testdepartementet/datasettkatalog/datasett-4.ttl> ,
+                               <https://testdepartementet/datasettkatalog/datasett-5.ttl> ;
+.
+
+<https://testdepartementet/datasettkatalog/kontaktpunkt-1.ttl>
+
+
+<https://testdepartementet/datasettkatalog/datasett-1.ttl> a dcat:Dataset ;
+   dct:title                   "Legeerklæring for parkeringstillatelse for forflytningshemmede"@nb ;
+   dct:description             "Legeerklæring som beskriver nedsatt funksjonsevne og behov for parkeringstillatelse for forflytningshemmede."@nb ; 
+.  
+
+
+<https://testdepartementet/datasettkatalog/datasett-2.ttl> a dcat:Dataset ;
+   dct:title                   "Passfoto"@nb ;
+   dct:description             "Bilde av person, etter krav til passfoto."@nb ;
+.
+
+<https://testdepartementet/datasettkatalog/datasett-3.ttl> a dcat:Dataset ;
+	dct:title                     "Førerkort for kjøretøy"@nb ;
+  dct:description               "Bevis som viser at person har rett til å kjøre et kjøretøy av en gitt klasse"@nb ;
+  
+.
+
+<https://testdepartementet/datasettkatalog/datasett-4.ttl> a dcat:Dataset ;
+	dct:title                      "Parkeringbevis for forflytningshemmede"@nb ;
+  dct:description                "Bevis som viser at kjøretøy kan parkeres etter rettigheter knyttet til parkeringstillatelse for forflytningshemmede"@nb ;
+  
+.
+
+<https://testdepartementet/datasettkatalog/datasett-5.ttl> a dcat:Dataset ;
+	dct:title                        "Register for parkeringstillatelser"@nb ;
+  dct:description                  "Registeret skal gi oversikt over hvilke kommunale parkeringstillatelser for forflytningshemmede som til enhver tid er gyldige."@nb ;
+  
+.
+
+
+<https://testdepartementet/datasettkatalog/datatjenste-1.ttl> a dcat:DataService ;
+  dct:title         "Register for parkeringstillatelser"@nb ;
+  dct:description   "API-et kan benyttes av leverandører av parkeringssystemer til å melde inn nye parkeringstillatelser for forflytningshemmede eller endringer i disse."
+  
