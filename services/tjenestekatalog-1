@@ -87,42 +87,46 @@
     dct:type 					<https://data.norge.no/vocabulary/service-channel-type#mail> ;
     dct:description 			"Papirskjema sendes til Bymiljøetaten, Oslo kommune."@nb .
  
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjon-1.ttl> a cv:Evidence ;
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjon-1.ttl> a cpsvno:RequredEvidence ;
     dct:title 					"Legeerklæring"@nb ;
     dct:description 			"Bekreftelse fra lege på funksjonsnedsettelse."@nb ;
-    dct:language 				<https://publications.europa.eu/resource/authority/language/NOR>,
-      <https://publications.europa.eu/resource/authority/language/ENG>; # engelsk
-    foaf:page <https://www.oslo.kommune.no/getfile.php/13500123-1703234712/Tjenester%20og%20tilbud/Gate%2C%20transport%20og%20parkering/Parkering/S%C3%B8k%20HC-kort/Legeerkl%C3%A6ringsskjema%20-%20HC.pdf> ;
-    dct:isPartOf <https://testdepartementet/datasettkatalog/datasett-1.ttl> . # datasett legeerklæring 
+    dct:language 				<https://publications.europa.eu/resource/authority/language/NOR> ;
+    foaf:page 					<https://www.oslo.kommune.no/getfile.php/13500123-1703234712/Tjenester%20og%20tilbud/Gate%2C%20transport%20og%20parkering/Parkering/S%C3%B8k%20HC-kort/Legeerkl%C3%A6ringsskjema%20-%20HC.pdf> ;
+    dct:isPartOf 				<https://testdepartementet/datasettkatalog/datasett-1.ttl> .
  
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjont-2.ttl> a cv:Evidence ;
-    dct:title "Passfoto"@nb ;
-    dct:description "Nyere bilde av søkeren."@nb ;
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjont-2.ttl> a cpsvno:RequredEvidence ;
+    dct:title 					"Passfoto"@nb ;
+    dct:description 			"Nyere bilde av søkeren, som følger kvalitetskrav til pass."@nb ;
+	foaf:page					<https://www.politiet.no/globalassets/tjenester-admin/pass-og-id-kort/kvalitetskrav-til-passfoto.pdf> ;
+	dct:isPartOf 				<https://testdepartementet/datasettkatalog/datasett-2.ttl> ;
     .
  
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjon-3.ttl> a cv:Evidence ;
-    dct:title "Kopi av gyldig legitimasjon"@nb ;
-    dct:description "placeholder beskrivelse" ; # Legg til beskrivelse 
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjon-3.ttl> a cpsvno:RequredEvidence ;
+    dct:title 					"Gyldig førerkort"@nb ;
+    dct:description 			"Kopi av førerkort som er gyldig i Norge skal legges ved søknaden for søkere som søker om parkeringstillatelse som fører" ; 
+	dct:isPartOf				<https://testdepartementet/datasettkatalog/datasett-3.ttl> ;
     .
 
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjon-4.ttl> a cv:Evidence ;
-    dct:title "Søknadsskjema for HC-kort"@nb ;
-    dct:description "placeholder for beskrivelse" ;
-    foaf:page <https://www.oslo.kommune.no/getfile.php/13500127-1703234712/.../Søknadsskjema%20HC-kort.pdf> .
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjon-4.ttl> a cpsvno:RequredEvidence ;
+    dct:title 					"Søknadsskjema for parkeringstillatelse for forflytningshemmede"@nb ;
+    dct:description 			"skjema hvor søker beskriver sitt behov for å parkere på parkeringsplasser for forflytningshemmede." ;
+    foaf:page 					<https://www.oslo.kommune.no/getfile.php/13500127-1703234712/.../Søknadsskjema%20HC-kort.pdf> .
 
 <https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-1.ttl> a cv:Output ;
-    dct:title "Innvilget søknad om parkeringstillatelse for forflytningshemmede (HC-kort)"@nb ;
-    dct:description "Søknad om parkeringtillatelse for forflytningshemmede er innvilget"@nb ;
+    dct:title 					"Innvilget søknad om parkeringstillatelse for forflytningshemmede"@nb ;
+    dct:description 			"Innvilget søknad om parkeringtillatelse for forflytningshemmede gir rett til å parkere motorvogn og på parkeringsplass reservert for forflytningshemmede angitt ved offentlig trafikkskilt, og visse andre vilkår i hele Norge."@nb ;
 .
  
 <https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-2.ttl> a cv:Output ;
-    dct:title "Parkeringstillatelse for forflytningshemmede (HC-kort)"@nb ;
-    dct:description "Kortet gir rett til å parkere på HC-plasser og på visse andre vilkår i hele Norge."@nb ;
+    dct:title 					"Parkeringsbevis"@nb ;
+    dct:description 			"Parkeringsbevis for parkeringstillatelse for forflytningshemmede. Beviset skal plasseres godt synlig i bilens frontrute."@nb ;
+	dct:isPartOf				<https://testdepartementet/datasettkatalog/datasett-4.ttl> ;
 .
 
 <https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-3.ttl> a cv:Output ;
     dct:title "Oppdatering av register for parkeringstillatelser"@nb ;
-    dct:description "Oppdateringen oppdaterer register for parkeringstillatelser med den nyinnvilgede parkeringstillatelsen"@nb ;
+    dct:description "Register for parkeringstillatelser oppdateres med den nyinnvilgede parkeringstillatelsen"@nb ;
+	dct:isPartOf 				<https://testdepartementet/datasettkatalog/datasett-4.ttl>
 . 
 
 <https://testdepartementet/tjenestekatalog-1/tjeneste-2.ttl> a cpsv:PublicService ;
@@ -139,14 +143,21 @@
     cv:isGroupedBy <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-1.ttl> , 
         <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-2.ttl> .
 
-<https://testdepartementet/tjenestekatalog-1/tjeneste-4.ttl> a cpsv:PublicService ;
-    dct:title "Gratis bompassering for forflytningshemmede"@nb ;
-    dct:description "placeholder beskrivelse"@nb ;
+<https://testdepartementet/tjenestekatalog-1/tjeneste-4.ttl> a cpsvno:Service ;
+    dct:title 					"Fri passering i bomringar rundt byområde for forflytningshemma"@nn ;
+    dct:description 			"Forflyttingshemma med gyldig parkeringsløyve frå kommunen har rett til fri passering i bomringar rundt byområde."@nn ;
+	dct:identifier				"https://testdepartementet/tjenestekatalog-1/tjeneste-4.ttl"^^xsd:anyURI ; 
+	foaf:page					<https://www.autopass.no/no/kunde/fritak/> ;
+	cv:ownedBy					<https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/555111098> ;	
+	dct:requires				<https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl>
    .
 
 <https://testdepartementet/tjenestekatalog-1/tjeneste-5.ttl> a cpsv:PublicService ;
-    dct:title "Fritak for piggdekkavgift for forflytningshemmede."@nb ;
-    dct:description "placeholder beskrivelse" @nb ;
+    dct:title 					"Fritak for piggdekkavgift for forflytningshemmede."@nb ;
+    dct:description 			"Biler med parkeringsbevis for forflytningshemmede behøver ikke å betale piggdekkgebyr" @nb ;
+	dct:identifier				"https://testdepartementet/tjenestekatalog-1/tjeneste-4.ttl"^^xsd:anyURI ;
+	cv:ownedBy					<https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/958935420> ;
+	dct:requires				<https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl>
 .
  
 
