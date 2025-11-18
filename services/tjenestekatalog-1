@@ -22,17 +22,17 @@
 
 <https://testdepartementet/tjenestekatalog-1.ttl> a dcat:Catalog ; # Katalog
    dct:description "Katalog som inneholder tjenester og hendelser knyttet til hackaton på Brukerrådet 19.-20. november 2025."@nb; 
-   dct:identifier "https://testdepartementet/tjenestekatalog1.ttl"^^xsd:anyURI; 
+   dct:identifier "https://testdepartementet/tjenestekatalog1.ttl"^^xsd:anyURI ; 
    dcatno:containsService <https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl> ,
-                          <https://testdepartementet/tjenestekatalog-1/tjeneste-2.ttl> ,
+              <https://testdepartementet/tjenestekatalog-1/tjeneste-2.ttl> ,
 			  <https://testdepartementet/tjenestekatalog-1/tjeneste-3.ttl> ,
 			  <https://testdepartementet/tjenestekatalog-1/tjeneste-4.ttl> ,
 			  <https://testdepartementet/tjenestekatalog-1/tjeneste-5.ttl> ;
-   cv:contactPoint <https://testdepartementet/tjenestekatalog1/kontaktpunkt-1.ttl>;
-   dct:title "Tjeneste- og hendelseskatalog for hackaton på Brukerrådet 2025"@nb;
-   dct:publisher <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/555111097>; # Organisasjonsnummer til Testdepartementet
-   dcatno:containsEvent <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-1.ttl>, 
-                        <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-2.ttl>;
+   cv:contactPoint <https://testdepartementet/tjenestekatalog1/kontaktpunkt-1.ttl> ;
+   dct:title "Tjeneste- og hendelseskatalog for hackaton på Brukerrådet 2025"@nb ;
+   dct:publisher <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/555111097> ; # Organisasjonsnummer til Testdepartementet
+   dcatno:containsEvent <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-1.ttl> , 
+                        <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-2.ttl> ;
                         .
 
 <https://testdepartementet/tjenestekatalog-1/kontaktpunkt-1.ttl> # kontaktpunkt
@@ -147,9 +147,8 @@
    .
 
 <https://testdepartementet/tjenestekatalog-1/tjeneste-5.ttl> a cpsv:PublicService ;
-    dct:title "Fritak for piggdekkavgift for forflytningshemmede."@nb
-    dct:description "placeholder beskrivelse" @nb ;
-.
+    dct:title "Fritak for piggdekkavgift for forflytningshemmede."@nb ;
+    dct:description "placeholder beskrivelse" @nb .
  
 
 <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-1.ttl> a cv:LifeEvent ;
