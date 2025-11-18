@@ -38,7 +38,7 @@
 <https://testdepartementet/tjenestekatalog-1/kontaktpunkt-1.ttl> # kontaktpunkt
    a cv:ContactPoint;
    schema:contactType "Kontaktside"@nb , "Kontaktside"@nn , "Contact page"@en ; # Valgfri med type kontaktpunkt
-   cv:ContactPage <https://www.digdir.no/digdir/kontakt-oss/943>; # Valgfri med kontaktside
+   cv:contactPage <https://www.digdir.no/digdir/kontakt-oss/943>; # Valgfri med kontaktside
    cv:email "mailto:fellesdatakatalog@digdir.no"^^xsd:anyURI; # Valgfri med e-post
    vcard:hasLanguage <http://publications.europa.eu/resource/authority/language/NOB> # Valgfri med har språk
 .
