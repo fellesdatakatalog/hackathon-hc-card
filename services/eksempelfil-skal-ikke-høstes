@@ -1,0 +1,169 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cccev: <http://data.europa.eu/m8g/cccev/> .
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
+@prefix cpsvno: <https://data.norge.no/vocabulary/cpsvno#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatno: <https://data.norge.no/vocabulary/dcatno#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <ttp://www.w3.org/2006/time#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://testdepartementet/tjenestekatalog-1.ttl> a dcat:Catalog ; # Katalog
+   dct:description "Katalog som inneholder tjenester og hendelser knyttet til hackaton på Brukerrådet 19.-20. november 2025."@nb; 
+   dct:identifier "https://testdepartementet/tjenestekatalog1.ttl"^^xsd:anyURI ; 
+   dcatno:containsService <https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl> ,
+              <https://testdepartementet/tjenestekatalog-1/tjeneste-2.ttl> ,
+			  <https://testdepartementet/tjenestekatalog-1/tjeneste-3.ttl> ,
+			  <https://testdepartementet/tjenestekatalog-1/tjeneste-4.ttl> ,
+			  <https://testdepartementet/tjenestekatalog-1/tjeneste-5.ttl> ;
+   cv:contactPoint <https://testdepartementet/tjenestekatalog1/kontaktpunkt-1.ttl> ;
+   dct:title "Tjeneste- og hendelseskatalog for hackaton på Brukerrådet 2025"@nb ;
+   dct:publisher <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/555111098> ; # Organisasjonsnummer til Testdepartementet
+   dcatno:containsEvent <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-1.ttl> , 
+                        <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-2.ttl> ;
+                        .
+
+<https://testdepartementet/tjenestekatalog-1/kontaktpunkt-1.ttl> # kontaktpunkt
+   a cv:ContactPoint;
+   vcard:category "Kontaktside"@nb , "Kontaktside"@nn , "Contact page"@en ; # Valgfri med type kontaktpunkt
+   cv:contactPage <https://www.digdir.no/digdir/kontakt-oss/943>; # Valgfri med kontaktside
+   cv:email "mailto:fellesdatakatalog@digdir.no"^^xsd:anyURI; # Valgfri med e-post
+   vcard:language <http://publications.europa.eu/resource/authority/language/NOB> # Valgfri med har språk
+.
+
+<https://testdepartementet/tjenestekatalog-1/kontaktpunkt-2.ttl> a cv:ContactPoint ;
+   vcard:category "epost"@nb , "epost"@nn , "email"@en ; # Valgfri med type kontaktpunkt
+   cv:email "mailto:fellesdatakatalog@digdir.no"^^xsd:anyURI ; # Valgfri med e-post
+   vcard:language <http://publications.europa.eu/resource/authority/language/NOB> . # Valgfri med har språk
+
+ 
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl> a cpsv:PublicService ; # Tjeneste parkeringstillatelse for forflytningshemmede
+    dct:title "Parkeringstillatelse for forflytningshemmede"@nb ;
+    dct:description "Tjenesten gjør det mulig for personer med nedsatt funksjonsevne å søke om parkeringstillatelse i Oslo kommune. Parkeringstillatelsen gir rett til å parkere på reserverte plasser og på spesielle vilkår."@nb ;
+    dct:identifier "https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl"^^xsd:anyURI ;
+    cv:hasCompetentAuthority <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/958935420> ; # Organisasjonsnummeret til Oslo Kommune
+    cv:contactPoint <https://testdepartementet/tjenestekatalog-1/kontaktpunkt-2.ttl> ;
+    cv:hasChannel <https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-1.ttl> , #må sjekke hvordan denne skal brukes
+      	<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-2.ttl> ;
+    cpsvno:hasRequiredEvidence <https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevdDokumentasjon-1.ttl> ,
+		    <https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevdDokumentasjon-2.ttl> , 			
+        <https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevdDokumentasjon-3.ttl> ;
+	cv:hasEvidence 
+    cpsvno:hasPossibleOutput <https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenesteresultat-1.ttl>,
+		<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenesteresultat-2.ttl> ;
+    dct:spatial <http://publications.europa.eu/resource/authority/place/NOR_OSL> ; # Oslo. 
+    foaf:homepage <https://www.oslo.kommune.no/gate-transport-og-parkering/parkering/sok-hc-kort/> ;  	
+    cv:processingTime "P4W"^^xsd:duration ;
+    adms:status <http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> ; # tjenesten er ferdig utviklet
+    cv:thematicArea <https://psi.norge.no/los/ord/parkering-og-hvileplasser> ;
+    cv:hasLegalResource <https://lovdata.no/eli/forskrift/2016/03/18/264> ; 
+    cv:relatedService <https://testdepartementet/tjenestekatalog-1/tjeneste-2.ttl> , <https://testdepartementet/tjenestekatalog-1/tjeneste-3.ttl> ;
+    cv:isGroupedBy <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-1.ttl> , <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-2.ttl> .
+ 
+ 
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-1.ttl> a cv:Channel ;
+    dct:identifier "https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-1.ttl"^^xsd:anyURI ;
+    dct:title "Digital innsending"@nb ;
+    dct:type <https://data.norge.no/vocabulary/service-channel-type#online-service> ; 
+    cv:ownedBy <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/958935420> ;
+    vcard:hasURL <https://www.oslo.kommune.no/parkering/hc-kort/soknad/> . # Dette er nettadressen til nettsiden søknaden kan startes fra. 
+ 
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-2.ttl> a cv:Channel ;
+    dct:identifier "https://testdepartementet/tjenestekatalog-1/tjeneste-2/tjenestekanal-1.ttl"^^xsd:anyURI ;
+    dct:title "Papirsøknad sendt i posten"@nb ;
+    dct:type <https://data.norge.no/vocabulary/service-channel-type#mail> ;
+    dct:description "Papirskjema sendes til Bymiljøetaten, Oslo kommune."@nb .
+
+
+ 
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevdDokumentasjon-4.ttl> a cpsvno:RequiresEvidence ;
+    dct:title "Søknadsskjema for HC-kort"@nb ;
+    dct:description "placeholder for beskrivelse" ;
+    foaf:page <https://www.oslo.kommune.no/getfile.php/13500127-1703234712/.../Søknadsskjema%20HC-kort.pdf> .
+ 
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevdDokumentasjon-1.ttl> a cpsvno:RequiredEvidence ;
+    dct:title "Legeerklæring"@nb ;
+    dct:description "Bekreftelse fra lege på funksjonsnedsettelse."@nb ;
+    cpsvno:validityDuration "P6M"^^xsd:duration ; #sjekk opp hvor gammel legeerklæring kan være
+    dct:language <https://publications.europa.eu/resource/authority/language/NOR>, # norsk
+      <https://publications.europa.eu/resource/authority/language/ENG>; # engelsk
+    foaf:page <https://www.oslo.kommune.no/getfile.php/13500123-1703234712/Tjenester%20og%20tilbud/Gate%2C%20transport%20og%20parkering/Parkering/S%C3%B8k%20HC-kort/Legeerkl%C3%A6ringsskjema%20-%20HC.pdf> ;
+    dct:isPartOf <https://testdepartementet/datasettkatalog/datasett-1.ttl> . # datasett legeerklæring 
+ 
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevdDokumentasjon-2.ttl> a cpsvno:RequiredEvidence ;
+    dct:title "Passfoto"@nb ;
+    dct:description "Nyere bilde av søkeren."@nb ;
+    .
+ 
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevdDokumentasjon-3.ttl> a cpsvno:RequiredEvidence ;
+    dct:title "Kopi av gyldig legitimasjon"@nb ;
+    dct:description "placeholder beskrivelse" ; # Legg til beskrivelse 
+    .
+
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenesteresultat-1.ttl> a cpsvno:PossibleOutput ;
+    dct:title "Innvilget søknad om parkeringstillatelse for forflytningshemmede (HC-kort)"@nb ;
+    dct:description "Søknad om parkeringtillatelse for forflytningshemmede er innvilget"@nb ;
+.
+ 
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenesteresultat-2.ttl> a cpsvno:PossibleOutput ;
+    dct:title "Parkeringstillatelse for forflytningshemmede (HC-kort)"@nb ;
+    dct:description "Kortet gir rett til å parkere på HC-plasser og på visse andre vilkår i hele Norge."@nb ;
+.
+
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenesteresultat-3.ttl> a cpsvno:PossibleOutput ;
+    dct:title "Oppdatering av register for parkeringstillatelser"@nb ;
+    dct:description "Oppdateringen oppdaterer register for parkeringstillatelser med den nyinnvilgede parkeringstillatelsen"@nb ;
+. 
+
+<https://testdepartementet/tjenestekatalog-1/tjeneste-2.ttl> a cpsv:PublicService ;
+    dct:title "Tilrettelagt transport (TT-kort)"@nb ;
+    dct:description "Ordning som gir personer med varig nedsatt funksjonsevne mulighet til å bruke tilrettelagt transport i Oslo."@nb ;
+    cv:hasCompetentAuthority <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/958935420> ;
+    cv:isGroupedBy <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-1.ttl> , 
+        <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-2.ttl> .
+ 
+<https://testdepartementet/tjenestekatalog-1/tjeneste-3.ttl> a cpsv:PublicService ;
+    dct:title "Ledsagerbevisordningen"@nb ;
+    dct:description "Gir ledsager gratis eller rabattert adgang til kultur- og fritidsaktiviteter."@nb ;
+    cv:hasCompetentAuthority <https://organization-catalogue.demo.fellesdatakatalog.digdir.no/organizations/958935420> ;
+    cv:isGroupedBy <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-1.ttl> , 
+        <https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-2.ttl> .
+
+<https://testdepartementet/tjenestekatalog-1/tjeneste-4.ttl> a cpsv:PublicService ;
+    dct:title "Gratis bompassering for forflytningshemmede"@nb ;
+    dct:description "placeholder beskrivelse"@nb ;
+   .
+
+<https://testdepartementet/tjenestekatalog-1/tjeneste-5.ttl> a cpsv:PublicService ;
+    dct:title "Fritak for piggdekkavgift for forflytningshemmede."@nb ;
+    dct:description "placeholder beskrivelse" @nb ;
+.
+ 
+
+<https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-1.ttl> a cv:LifeEvent ;
+    dct:title "Å miste eller få endret funksjonsevne"@nb ;
+    dct:description "Livshendelse som omfatter tjenester og ytelser ved varig eller midlertidig funksjonsnedsettelse."@nb ;
+    cpsvno:mayTriggerNeedFor <https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl> ,
+	<https://testdepartementet/tjenestekatalog-1/tjeneste-2.ttl> ,
+	<https://testdepartementet/tjenestekatalog-1/tjeneste-3.ttl> .
+	
+ 
+<https://testdepartementet/tjenestekatalog-1/hendelser/livshendelse-2.ttl> a cv:LifeEvent ;
+    dct:title "Aldring og nedsatt mobilitet"@nb ;
+    dct:description "Livshendelse som omfatter tjenester rettet mot eldre med redusert funksjonsevne og mobilitet."@nb ;
+    cpsvno:mayTriggerNeedFor	<https://testdepartementet/tjenestekatalog-1/tjeneste-1.ttl> ,
+	      						<https://testdepartementet/tjenestekatalog-1/tjeneste-2.ttl> ,
+      							<https://testdepartementet/tjenestekatalog-1/tjeneste-3.ttl> .
+
