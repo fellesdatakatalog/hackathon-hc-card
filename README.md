@@ -30,7 +30,7 @@ This repository is organized into folders for different types of specifications:
 3. Choose "Logg inn via ID-porten"
 4. Sign in with the provided demo-user (you'll need to set a new password on first login)
 5. Refer to https://demo.fellesdatakatalog.digdir.no/publishing/about-harvesting if you're unfamiliar with the admin-portal.
-6. Fill the form as per the documentation, note that "Utgiver" _must_ be 55511198. "URL til datakilde" will be the URL to the RAW-format of the file you've added to this repository, i.e., https://raw.githubusercontent.com/fellesdatakatalog/hackathon-hc-card/refs/heads/main/services/tjenestekatalog-1 OR any other harvest endpoint where you've chosen to publish your file.
+6. Fill the form as per the documentation. "URL til datakilde" will be the URL to the RAW-format of the file you've added to this repository, i.e., https://raw.githubusercontent.com/fellesdatakatalog/hackathon-hc-card/refs/heads/main/services/tjenestekatalog-1 OR any other harvest endpoint where you've chosen to publish your file. Note that if you chose to not use this repo as harvest endpoint, you MUST include the organization number 555111098 OR the name of this repo somewhere in the URL i.e. the specification file name.
 7. Save the data source and click harvest.
 8. If the file is accepted, you'll be able to view it in our portal after a few minutes, depending on the datatype:
 - Datasets: 10–15 minutes
