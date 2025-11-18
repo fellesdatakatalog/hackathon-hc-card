@@ -55,10 +55,10 @@
     cv:contactPoint 			<https://testdepartementet/tjenestekatalog-1/kontaktpunkt-2.ttl> ;
     cv:hasChannel 				<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-1.ttl> , 
       							<https://testdepartementet/tjenestekatalog-1/tjeneste-1/tjenestekanal-2.ttl> ;
-  	cpsv:hasInput 				<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-1.ttl> ,
-								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-2.ttl> ,
-								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-3.ttl> ,
-								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-4.ttl>; 
+  	cpsv:hasInput 				<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjon-1.ttl> ,
+								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjon-2.ttl> ,
+								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjon-3.ttl> ,
+								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjon-4.ttl>; 
     cpsv:produces 				<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-1.ttl> ,
 								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-2.ttl> ,
 								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-3.ttl> ;
@@ -87,26 +87,25 @@
     dct:type 					<https://data.norge.no/vocabulary/service-channel-type#mail> ;
     dct:description 			"Papirskjema sendes til Bymiljøetaten, Oslo kommune."@nb .
  
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-1.ttl> a cv:Evidence ;
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjon-1.ttl> a cv:Evidence ;
     dct:title 					"Legeerklæring"@nb ;
     dct:description 			"Bekreftelse fra lege på funksjonsnedsettelse."@nb ;
-    cpsvno:validityDuration 	"P6M"^^xsd:duration ; #sjekk opp hvor gammel legeerklæring kan være
-    dct:language <https://publications.europa.eu/resource/authority/language/NOR>, # norsk
+    dct:language 				<https://publications.europa.eu/resource/authority/language/NOR>,
       <https://publications.europa.eu/resource/authority/language/ENG>; # engelsk
     foaf:page <https://www.oslo.kommune.no/getfile.php/13500123-1703234712/Tjenester%20og%20tilbud/Gate%2C%20transport%20og%20parkering/Parkering/S%C3%B8k%20HC-kort/Legeerkl%C3%A6ringsskjema%20-%20HC.pdf> ;
     dct:isPartOf <https://testdepartementet/datasettkatalog/datasett-1.ttl> . # datasett legeerklæring 
  
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-2.ttl> a cv:Evidence ;
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjont-2.ttl> a cv:Evidence ;
     dct:title "Passfoto"@nb ;
     dct:description "Nyere bilde av søkeren."@nb ;
     .
  
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-3.ttl> a cv:Evidence ;
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjon-3.ttl> a cv:Evidence ;
     dct:title "Kopi av gyldig legitimasjon"@nb ;
     dct:description "placeholder beskrivelse" ; # Legg til beskrivelse 
     .
 
-<https://testdepartementet/tjenestekatalog-1/tjeneste-1/input-4.ttl> a cv:Evidence ;
+<https://testdepartementet/tjenestekatalog-1/tjeneste-1/påkrevd-dokumentasjon-4.ttl> a cv:Evidence ;
     dct:title "Søknadsskjema for HC-kort"@nb ;
     dct:description "placeholder for beskrivelse" ;
     foaf:page <https://www.oslo.kommune.no/getfile.php/13500127-1703234712/.../Søknadsskjema%20HC-kort.pdf> .
