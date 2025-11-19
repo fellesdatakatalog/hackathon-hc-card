@@ -1,0 +1,79 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<#hc-parkering-nasjonal> a cpsv:PublicService ;
+    dct:title "Parkeringstillatelse for forflytningshemmede (HC-kort)"@nb ;
+    dct:description "Tjenesten gir personer med dokumentert forflytningshemming mulighet til å søke om parkeringstillatelse som gir adgang til parkeringsplasser reservert for forflytningshemmede, samt fritak fra avgift på kommunale parkeringsplasser og særskilte plasser på flyplasser."@nb ;
+    dct:identifier "hc-parkering-nasjonal" ;
+    cpsv:produces [
+        a cv:Output ;
+        dct:title "Parkeringstillatelse (HC-kort)"@nb
+    ] ;
+    cpsv:hasCompetentAuthority [
+        a cv:PublicOrganisation ;
+        dct:title "Kommunen der søker er bosatt"@nb
+    ] ;
+    cv:hasLegalResource [
+        a cv:LegalResource ;
+        dct:title "Forskrift om parkeringstillatelse for forflytningshemmede"@nb ;
+        dct:identifier "FOR-2016-03-18-264" ;
+        dct:source <https://lovdata.no/dokument/SF/forskrift/2016-03-18-264>
+    ], [
+        a cv:LegalResource ;
+        dct:title "Forskrift om parkeringstillatelse for forflytningshemmede på flyplasser"@nb ;
+        dct:identifier "FOR-2016-03-18-260" ;
+        dct:source <https://lovdata.no/dokument/SF/forskrift/2016-03-18-260>
+    ], [
+        a cv:LegalResource ;
+        dct:title "Vegtrafikkloven § 8"@nb ;
+        dct:source <https://lovdata.no/dokument/NL/lov/1965-06-18-4>
+    ] ;
+    cv:hasChannel [
+        a cv:Channel ;
+        dct:title "Digitalt skjema"@nb ;
+        cv:channelType "web"
+    ], [
+        a cv:Channel ;
+        dct:title "Papirskjema"@nb ;
+        cv:channelType "physical"
+    ] ;
+    cv:processingTime "P4W" ;
+    cv:cost [
+        a cv:Cost ;
+        cv:isFree true
+    ] ;
+    cv:hasCriterion [
+        a cv:Criterion ;
+        dct:description "Søker må identifisere seg med elektronisk ID på sikkerhetsnivå 3 eller høyere (BankID, MinID, Buypass) ved digital søknad."@nb
+    ], [
+        a cv:Criterion ;
+        dct:description "Legeerklæring som dokumenterer at søker har vesentlig nedsatt forflytningsevne."@nb
+    ], [
+        a cv:Criterion ;
+        dct:description "Dokumentasjon på behov for parkering nær bosted, arbeid eller aktivitet."@nb
+    ], [
+        a cv:Criterion ;
+        dct:description "Dersom søker ikke er den søknaden gjelder, må relasjon til den personen dokumenteres (f.eks. verge, forelder)."@nb
+    ] ;
+    cv:hasEvidence [
+        a cv:Evidence ;
+        dct:title "Legeattest"@nb
+    ], [
+        a cv:Evidence ;
+        dct:title "Passfoto"@nb
+    ], [
+        a cv:Evidence ;
+        dct:title "Kopi av førerkort (ved søknad som fører)"@nb
+    ], [
+        a cv:Evidence ;
+        dct:title "Gyldig legitimasjon (ved fysisk søknad)"@nb
+    ], [
+        a cv:Evidence ;
+        dct:title "Dokumentasjon på relasjon (ved søknad på vegne av annen person)"@nb
+    ] ;
+    cv:relatedService [
+        a cpsv:PublicService ;
+        dct:title "Fornyelse av parkeringstillatelse for forflytningshemmede"@nb
+    ] .
