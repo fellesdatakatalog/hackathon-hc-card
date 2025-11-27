@@ -63,10 +63,12 @@
 								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-2.ttl> ,
 								<https://testdepartementet/tjenestekatalog-1/tjeneste-1/output-3.ttl> ;
     dct:spatial 				<http://publications.europa.eu/resource/authority/place/NOR_OSL> ; # Oslo. 
-    foaf:homepage 				<https://www.oslo.kommune.no/gate-transport-og-parkering/parkering/sok-hc-kort/> ;  	
+    foaf:homepage 				<https://www.oslo.kommune.no/gate-transport-og-parkering/parkering/sok-hc-kort/> ;
     cv:processingTime 			"P4W"^^xsd:duration ;
     adms:status 				<http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> ;
-    cv:thematicArea 			<https://psi.norge.no/los/ord/parkering-og-hvileplasser> ;
+    cv:thematicArea 			<https://psi.norge.no/los/ord/parkering-og-hvileplasser> ,
+                                <http://publications.europa.eu/resource/authority/data-theme/TRAN> ,
+                                <http://eurovoc.europa.eu/2663> ;
     cv:hasLegalResource 		<https://lovdata.no/eli/forskrift/2016/03/18/264> ; 
     cv:relatedService 			<https://testdepartementet/tjenestekatalog-1/tjeneste-2.ttl> , 
 								<https://testdepartementet/tjenestekatalog-1/tjeneste-3.ttl> ;
